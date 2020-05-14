@@ -1,0 +1,26 @@
+// Skiplink singleton variables
+$skiplink-transition: 200ms ease;
+$skiplink-z-index: 1001;
+
+/* Skiplink singleton */
+a.skiplink {
+	align-items: center;
+	background-color: $fg-color;
+	color: $bg-color;
+	display: block;
+	display: flex;
+	height: $element-height;
+	justify-content: center;
+	margin-top: ($element-height * -1);
+	position: relative;
+	text-decoration: none;
+	transition: margin-top $skiplink-transition;
+	width: 100%;
+	z-index: $skiplink-z-index;
+
+	&:focus {
+		box-shadow: inset 0 0 0 3px $focus-color;
+		margin-top: 0;
+		outline: 0;
+	}
+}
